@@ -58,6 +58,8 @@ body {
 
 .header__top {
     margin-bottom: 86px;
+    position: relative;
+    z-index:2;
 }
 
 .header__content {
