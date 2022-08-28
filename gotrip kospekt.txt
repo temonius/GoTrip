@@ -418,3 +418,62 @@ absolute - наследуемый класс.
  border-radius: 50px;
 
 }
+
+
+кнопка 
+
+/* Button */
+будем основываться на padding
+
+ширину и высоту я не задаю
+
+
+.btn {
+    display:inline-block; - по умолчанию у ссылки не работают блочные свойства
+    padding: 13px 44px; - вместо ширины и высоты
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF; - градиент
+    border-radius: 100px; - скругление углов
+
+    поработаем с текстом
+
+    font-size: 15px;
+    font-weight: 500px;
+
+
+}
+
+можно поведение по ::hover добавить
+
+/*поведение при наведении */
+.btn:hover {
+color:black; /* меняет цвет */
+transition:color 0.3s ease-in; /* медленно меняет цвет */
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+добавить что бы выровнять signup и login
+align-items: center;
+
+
+контент
+
+бейджик заголовок текст и кнопка
+
+классы
+
+header__badge
+header__title 
+header__text 
+header__btn 
+
+
+
+
+
+
+
+
