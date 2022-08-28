@@ -471,6 +471,97 @@ header__text
 header__btn 
 
 
+в scss все это было бы в отдельных файлах
+
+бейджик - есть тексти подложка
+
+
+.header__badge {
+margin-bottom:7px; - я не делаю его компонентом поэтому margin вешаю на него
+display:inline-block; - размеры под содержимое
+padding: 11px 30px;
+font-size: 18px;
+font-weight: 500;
+background: rgba(255, 255, 255, 0.25);
+border-radius: 15px;
+
+}
+
+
+текст
+цвет белый с прозрачностью
+
+
+.header__text {
+
+margin-bottom: 68px;
+font-size: 25px;
+font-weight: 700;
+color:rgba(255, 255, 255, 0.7);
+
+}
+
+
+добавляем картинку
+
+что бы контент стоял рядок картинкой
+
+объединяем контейнер для картинки и контейнер для контента в общий блок 
+
+.header__row
+
+и вешаем на него display flexbox
+
+картинак в шапке может сжиматься
+
+для испраления нужно отменить reset для картинок 
+
+max-width: unset; - вместо 100%
+
+.header__image img {
+max-width: unset;
+width: 894px;
+height: 940px;
+}
+
+картинка не должна поджиматть другие блоки
+
+поэтому задам картинке 
+
+position absolute
+
+а блоку header__image position relative
+
+загнать картинку в верхний правй угол 
+
+top 0
+right 0
+
+блок под картинкой не имеет ширины. картинка съезжяет в лево и заслонает
+
+соседний блок
+
+
+картинка в абсолюте она выпадает из потока
+
+задать для .header__image flex-grow:1 - что бы он растягивался
+
+нужно что бы картинка не выпадала за пределы шапки 
+
+пропишем overflow hiden для .header тогда она не будет выпадать
+
+дальше нужно приподнять на глаз картинку
+
+поиграться со значением top
+
+добавляем relative и z-index для .header__content что бы картинка не перекрывала текст
+
+.header__content {
+   /*  background-color: #f0f0f0;*/
+    max-width: 592px;
+    position: relative;
+    z-index:1;
+}
 
 
 

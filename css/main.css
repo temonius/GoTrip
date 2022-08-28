@@ -32,6 +32,8 @@ body {
 
 
 .header {
+    overflow: hidden;
+    color: #FFF;
     position: relative;
     padding-top: 44px;
     min-height: 940px;
@@ -61,6 +63,8 @@ body {
 .header__content {
    /*  background-color: #f0f0f0;*/
     max-width: 592px;
+    position: relative;
+    z-index:1;
 }
 
 
@@ -139,4 +143,66 @@ transition:color 0.3s ease-in; /* медленно меняет цвет */
 .btn:active {
     position: relative;
     top: 1px;
+}
+
+
+/* header content */
+
+
+.header__badge {
+margin-bottom:7px;
+display:inline-block;
+padding: 11px 30px;
+font-size: 18px;
+font-weight: 500;
+background: rgba(255, 255, 255, 0.25);
+border-radius: 15px;
+
+}
+
+.header__title {
+margin-bottom: 30px;
+font-size: 55px;
+font-weight: 300;
+
+}
+
+.header__text {
+
+margin-bottom: 68px;
+font-size: 25px;
+font-weight: 700;
+color:rgba(255, 255, 255, 0.7);
+}
+
+.header__button {
+display: inline-block;
+padding: 27px 48px;
+font-size: 25px;
+font-weight: 600;
+background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+border-radius: 27px;
+
+
+}
+
+.header__button:hover {
+    color:black; /* меняет цвет */
+    transition:color 0.3s ease-in; /* медленно меняет цвет */
+    } 
+
+.header__row {
+    display: flex;
+}
+.header__image {
+    position: relative;
+    flex-grow: 1;
+}
+.header__image img {
+ position: absolute;
+ top: -170px;
+ right: -87px;
+max-width: unset;
+width: 894px;
+height: 940px;
 }
