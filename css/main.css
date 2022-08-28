@@ -38,6 +38,10 @@ body {
     background:linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%),#204434;
 }
 
+.header a {
+    color: #fff;
+}
+
 .header:after { 
     content: "";
     position: absolute;
@@ -51,11 +55,70 @@ body {
         
 
 .header__top {
-    background-color:#f6f6f6;
     margin-bottom: 86px;
 }
 
 .header__content {
-    background-color: #f0f0f0;
+   /*  background-color: #f0f0f0;*/
     max-width: 592px;
+}
+
+
+/* NAVIGATION */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo a {
+    color: inherit;
+} 
+
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__list a {
+    position: relative;
+}
+
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+
+ content: "";
+ position: absolute;
+ left:0;
+ bottom: -6px;
+ display: block;
+ width:35px;
+ height:4px;
+ background-color:#c4c4c4;
+ border-radius: 50px;
+
+}
+
+.nav__signup {
+display: flex;
+column-gap: 25px;
+font-size: 15px;
+font-weight: 500;
+}
+
+/* Button */
+
+.btn {
+
 }

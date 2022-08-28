@@ -319,5 +319,102 @@ nav - навигация вся.
 </div>
 
 
+навигация
+
+эти ячейки по flexbox разбрасать. space-between что бы они в ряд выстроились
+
+пустое пространство между ними было.
+
+.nav {
+    display: flex; - флекс
+    justify-content: space-between; - выстроить в ряд
+    column-gap: 80px; - растояние 80. до 80 дойдет и всё.
+}
+
+есть ячейки для блоков навигации
 
 
+логотип набран текстом 
+
+                <div class="nav__logo">
+                    <h2 class="logo"><a href="#!" class="">GoTrip</a></h2>
+                </div>
+
+стилизуем логотип
+
+.logo {
+    font-size: 20px;
+    
+}
+
+цвет белый прописываем в header
+
+птому что заливка темная.
+
+
+ссылки в лого должны быть такими е самыми как в logo
+
+.logo a {
+    color: inherit;
+} 
+
+навигация
+
+                <ul class="nav__list">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Services</a></li>
+                    <li><a href="#!">Pricing</a></li>
+                    <li><a href="#!">Contact</a></li>
+                </ul>
+
+выстроить список в линию
+
+.nav__list {
+    display: flex;
+}
+
+есть отступы
+
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+}
+
+
+в макете активная ссылка подчеркнута
+
+добавим класс active                
+
+                <ul class="nav__list">
+                    <li><a href="#!" class="active" >Home</a></li>
+                    <li><a href="#!">Services</a></li>
+                    <li><a href="#!">Pricing</a></li>
+                    <li><a href="#!">Contact</a></li>
+                </ul>
+
+если есть ссылка и она активна. будет подчеркивание.
+
+
+relative
+родтельский класс. относительного него позиционированеи
+.nav__list a {
+    position: relative;
+}
+
+
+absolute - наследуемый класс.
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+
+ content: "";
+ position: absolute;
+ left:0;
+ bottom: -6px;
+ display: block;
+ width:35px;
+ height:4px;
+ background-color:#c4c4c4;
+ border-radius: 50px;
+
+}
