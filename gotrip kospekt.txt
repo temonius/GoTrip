@@ -9,4 +9,18 @@ reset.css
 
 @import './reset.css';
 
+font fascia 
 
+список начертаний шрифтов
+
+fonts.google.com
+
+@import url()
+
+body {
+    font-family: 'Poppins',sans-serif;
+}
+
+figma export - графика
+
+ctrl+d дубликат изображения
