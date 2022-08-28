@@ -90,6 +90,7 @@ border radius добавляеем через css
 :root {
     --container-width: 1270px;
     --container-padding: 15px;
+    --secondary 0f1f1c
 }
 
 таким образом заводим переменные в css
@@ -107,6 +108,17 @@ border radius добавляеем через css
 --secondary 0f1f1c
 
 выбираем rgba и указываем прозрачность 0.5
+
+max-width - ширина с прицелом на адаптив
+для переменных мы пишем var(переменная)
+
+margin: 0 auto; - что бы он был по центру
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+    }
 
 
 

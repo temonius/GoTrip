@@ -17,7 +17,8 @@ body {
     --secondare: rgba(15, 31, 28,0.5);
 }
 
-
-.conteiner {
-
-}
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+    }
