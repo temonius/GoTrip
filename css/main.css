@@ -22,3 +22,16 @@ body {
     padding: 0 var(--container-padding);
     margin: 0 auto;
     }
+
+    .container-right{
+        padding-left:calc( 100% - var(--container-width)/2 + var(--container-padding) );
+        }
+
+
+/* Header */
+
+
+.header {
+    min-height: 940px;
+}
+        
