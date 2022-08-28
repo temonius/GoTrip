@@ -3,4 +3,21 @@
 
 body {
     font-family: 'Poppins',sans-serif;
+    background-color: #f6f6f6;
+    color:#0f1f1c;
+}
+
+.none {
+    display:none !important
+}
+
+:root {
+    --container-width: 1270px;
+    --container-padding: 15px;
+    --secondare: rgba(15, 31, 28,0.5);
+}
+
+
+.conteiner {
+
 }
