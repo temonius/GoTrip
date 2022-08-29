@@ -571,6 +571,164 @@ right 0
 можно переходить к следующему блоку
 
 
+основной контент
+два контейнера. один конент и слайдер
+
+    <section class="destinations">      - секция содержимого
+        <div class="conteiner-right">   - котейнер для принятия на себя отступов
+            <div class="destinations_row"> - контейнер для выстраивания в ряд
+
+
+            <div class="destinations__content"> - контент
+
+            </div>
+            <div class="destinations__slider"> - слайдер
+
+            </div>
+        </div>            
+    </div>
+
+
+    пропишем классы
+
+    все станет на свои места
+
+на destinations вешаем отступы. на row мы вешаем flex. отступ внутри row - column-gap вместо
+
+padding или margin. для .destinations__content есть определенная ширина 456. max-width.
+
+определим ширину для слайдера. он уходит за горизонт. но ширина нужна.
+
+ширина 1110 width. на мобилках мы все это будем обрабатывать.
+
+flex-shrink:0; позволяет не уменьшать блок слайдера. появлется прокрутка в сторону.
+
+избавимся от scroll. на destinations повесим overflow-x hidden
+
+таким образом слайдер уходит за горизонт но прокрутка не появляется. 
+
+
+заголовок h2
+
+                Choice Of  - поместим в <span> что отдельно стилизовать. шрифт меньше
+
+                Destinations
+
+
+
+слайдер
+предусмотрел что одна из акртинок должна быть активной active и у нее размер будет побольше
+
+ <div class="destinations__slider">
+                <div class="slider">
+                    <img class="slider__item" src="./img/slider/rec1.jpg" alt="" >
+                    <img  class="slider__item active" src="./img/slider/rec2.jpg" alt="">
+                    <img class="slider__item" src="./img/slider/rec3.jpg" alt="" >
+                </div>
+            </div>
+
+
+.slider__item {
+    width: 335px;
+    height: 402px;
+    object-fit: cover; - корректное масшаатирование изображения
+    border-radius: 35px;
+}
+
+.slider__item.active {
+    width: 380px;
+    height: 456px;
+}
+
+
+сделаем это каруселью
+
+переходим на сайт https://cdnjs.com/libraries/OwlCarousel2
+
+копируем ссылку на jquery
+
+копируем ссылки на теги js css theme
+
+переходим на github OwlCarousel2 и копируем html размерку
+
+копируем js код
+
+подключаем код.
+
+
+
+у нас будет обертка slider а внутри каруселью
+
+есть api опции на github 
+
+owl карусель простая как автомат калашникова
+
+настроим 
+
+опции передаются в виде объекта
+нужно прописать center true что бы центральный элемент выделялся размером 
+уберем класс active с картинки
+
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        center:true,
+        loop:true,
+        margin:30,
+        startPosition:2,
+        items:3,
+    });
+  });
+
+  в испекторе кода мы можем видеть что активная центрированная картинка получила класс center
+
+  определим класс center
+
+внутри слайдера есть класс .center и там .slider__item
+
+.slider .center .slider__item {
+    width: 380px;
+    height: 456px;
+}
+
+добавим плавность
+
+ transition: 0.2s ease-in; в класс .slider__item
+
+ нужно что бы не выделеные картинки были ниже. зададим margin-top 27
+
+ для активного .slider .center .slider__item - margin-top 0
+
+
+добавим кнопки что бы управлять каруселью
+
+
+                      <button class="slider__btn slider__btn--next">
+                        <img src="./img/slider/Vector.svg" alt="">
+                    </button>
+
+                    <button class="slider__btn slider__btn--prev">
+                        <img src="./img/slider/Vector2.svg" alt="">
+                    </button>
+
+
+стили
+
+круг 68 на 68
+
+
+центрируем кнопку prev
+
+    position: absolute;
+    left:27px;
+    top:50%;
+    transform: translateY(-50%);
+
+
+слайдеру нужно дать position relative он родитель
+
+
+
+
 
 
 
