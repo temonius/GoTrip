@@ -462,3 +462,58 @@ color:var(--secondare);
 .cta__button {
 
 }
+
+.subscribe {
+padding:35px 0 50px;
+}
+
+.subscribe__title {
+margin-bottom: 60px;
+max-width: 494px;
+font-size: 55px; 
+font-weight: 600;
+text-align: center;
+}
+
+.subscribe__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-form {
+border-radius: 35px;
+background-color: #fff;
+padding: 12px 15px 12px 46px;
+display: flex;
+column-gap: 20px;
+}
+
+.subscribe-form__input {
+border: none;
+font-size: 24px;
+font-weight: 500px;
+color: var(--secondare);
+}
+
+.subscribe__form__input::placeholder {
+    border: none;
+    color: var(--secondare);
+}
+
+.subscribe-form__btn {
+    border: none;
+    display:inline-block;
+    padding: 34px 86px;
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+    border-radius: 35px;
+    font-size: 25px;
+    font-weight: 600px;
+    color: #fff;
+}
+
+.subscribe-form__btn:active,
+.subscribe-form__btn:hover {
+    color:black; /* меняет цвет */
+    transition:color 0.3s ease-in; /* медленно меняет цвет */
+}
