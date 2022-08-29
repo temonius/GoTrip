@@ -220,7 +220,9 @@ height: 940px;
 
 .destinations_row {
     display: flex;
+    justify-content: center;
     column-gap: 50px;
+
 }
 
 .destinations__content {
@@ -320,4 +322,82 @@ position: relative;
     padding-right: 26px;
     justify-content: flex-end;
     z-index:1;
+}
+
+
+/* Costumers */
+
+
+.costumers {
+padding:100px 0  133px;
+}
+
+.costumers__row {
+display: flex;
+column-gap: 68px;
+}
+
+.costumers_img {
+max-width: 478px;
+}
+
+.costumers_img img {
+    border-radius: 60px;
+    }
+
+.costumers__content {
+
+}
+
+.costumers__title {
+margin-bottom: 35px;
+font-size: 45px;
+font-weight: 500;
+}
+
+.review {
+max-width: 490px;
+}
+
+.review__client {
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+margin-bottom: 60px;
+}
+
+.review__client--avatar {
+    overflow: hidden;
+width: 134px;
+height: 134px;
+border-radius: 50%;
+background-color: #FF794E;
+
+}
+
+.review__client--desc {
+
+}
+
+.review__client--desc-name {
+font-size: 33px;
+margin-bottom: 10px;
+font-weight: 500;
+}
+
+.review__client--desc-country {
+ font-size: 25px;
+ color: var(--secondare);
+}
+
+.review__text {
+margin-bottom: 30px;
+color:var(--secondare);
+font-size: 22px;
+font-weight: 500;
+}
+
+
+.review__rating {
+
 }
