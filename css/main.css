@@ -15,6 +15,7 @@ body {
     --container-width: 1270px;
     --container-padding: 15px;
     --secondare: rgba(15, 31, 28,0.5);
+    --orange:#FF7C4E;
 }
 
 .container {
@@ -86,6 +87,12 @@ body {
     font-weight: 700;
 }
 
+.logo__footer {
+    color: #FF7C4E;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .logo a {
     color: inherit;
 } 
@@ -95,6 +102,17 @@ body {
     column-gap: 80px;
     font-size: 15px;
     font-weight: 500;
+}
+.nav__list--footer {
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__list--footer a.active,
+.nav__list--footer a:hover{
+    color: var(--orange);
 }
 
 .nav__list a {
@@ -134,7 +152,7 @@ align-items: center;
     border-radius: 100px;
     font-size: 15px;
     font-weight: 500px;
-    color: #fff;
+    color: #fff !important;
 }
 
 /*поведение при наведении */
@@ -509,7 +527,7 @@ color: var(--secondare);
     border-radius: 35px;
     font-size: 25px;
     font-weight: 600px;
-    color: #fff;
+    color: #fff !important;
 }
 
 .subscribe-form__btn:active,
@@ -517,3 +535,13 @@ color: var(--secondare);
     color:black; /* меняет цвет */
     transition:color 0.3s ease-in; /* медленно меняет цвет */
 }
+
+
+.footer {
+    padding: 56px 0 74px;
+}
+
+.footer a {
+color: var(--secondare);
+}
+
